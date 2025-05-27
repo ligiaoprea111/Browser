@@ -1,7 +1,7 @@
 package decorator;
 
-public class AntiPhishingTab extends AbstractTabDecorator{
-    public AntiPhishingTab(Tab tab) {
+public class AntiPhishingTab extends ADecoratorTab {
+    public AntiPhishingTab(ITab tab) {
         super(tab);
     }
 

@@ -1,9 +1,9 @@
 package decorator;
 
-public abstract class AbstractTabDecorator implements Tab{
-    protected Tab tab;
+public abstract class ADecoratorTab implements ITab {
+    protected ITab tab;
 
-    public AbstractTabDecorator(Tab tab) {
+    public ADecoratorTab(ITab tab) {
         this.tab = tab;
     }
 
