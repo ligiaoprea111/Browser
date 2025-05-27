@@ -1,7 +1,7 @@
 package decorator;
 
-public class AdBlockTab extends AbstractTabDecorator{
-    public AdBlockTab(Tab tab) {
+public class AdBlockTab extends ADecoratorTab {
+    public AdBlockTab(ITab tab) {
         super(tab);
     }
 

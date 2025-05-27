@@ -1,7 +1,7 @@
 package decorator;
 
-public class SessionRecoveryTab extends AbstractTabDecorator{
-    public SessionRecoveryTab(Tab tab) {
+public class SessionRecoveryTab extends ADecoratorTab {
+    public SessionRecoveryTab(ITab tab) {
         super(tab);
     }
 

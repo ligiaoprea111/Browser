@@ -1,5 +1,5 @@
 package decorator;
 
-public interface Tab {
+public interface ITab {
     void display();
 }
