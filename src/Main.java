@@ -1,4 +1,5 @@
 import decorator.*;
+import strategy.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +26,19 @@ public class Main {
         System.out.println("+ recuperare sesiuni, ad-block si anti-phishing: ");
         fullPremiumTab.display();
 
+        //strategy
+        System.out.println("\n--- Randare în funcție de strategie ---");
 
+        RenderStrategy strategy;
+
+        strategy = new HighFidelityRendering();
+        strategy.renderPage("https://openai.com");
+
+        strategy = new CompressedRendering();
+        strategy.renderPage("https://github.com");
+
+        strategy = new MinimalistRendering();
+        strategy.renderPage("https://google.com");
     }
 }
 
