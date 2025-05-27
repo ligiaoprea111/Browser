@@ -27,18 +27,20 @@ public class Main {
         fullPremiumTab.display();
 
         //strategy
-        System.out.println("\n--- Randare în funcție de strategie ---");
+        Browser browser = new Browser();
 
-        RenderStrategy strategy;
+        PerformanceMetrics strongPC = new PerformanceMetrics(1200, 30.0);
+        PerformanceMetrics decentPC = new PerformanceMetrics(700, 65.0);
+        PerformanceMetrics lowEndPC = new PerformanceMetrics(200, 85.0);
 
-        strategy = new HighFidelityRendering();
-        strategy.renderPage("https://openai.com");
+        System.out.println("🔗 Visiting openai.com");
+        browser.visit("https://openai.com", strongPC);
 
-        strategy = new CompressedRendering();
-        strategy.renderPage("https://github.com");
+        System.out.println("\n🔗 Visiting github.com");
+        browser.visit("https://github.com", decentPC);
 
-        strategy = new MinimalistRendering();
-        strategy.renderPage("https://google.com");
+        System.out.println("\n🔗 Visiting wikipedia.org");
+        browser.visit("https://wikipedia.org", lowEndPC);
     }
 }
 
